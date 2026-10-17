@@ -3,18 +3,30 @@ import {
     StyledA,
     StyledH1,
     StyledH2,
-    StyledH3,
+    StyledH3, StyledInput,
     StyledP,
     StyledTable,
     Textbox, ThumbnailImg
-} from "../styles/GeneralStyles.tsx";
-import gimmeCardsImg from "../assets/gimmecards.png";
-import blindboxImg from "../assets/blindbox.png";
-import unoImg from "../assets/uno.png";
-import machineImg from "../assets/machine.jpg";
+} from "../../styles/ReusableStyles.tsx";
+import styled from "styled-components";
+import gimmeCardsImg from "../../assets/gimmecards.png";
+import blindboxImg from "../../assets/blindbox.png";
+import unoImg from "../../assets/uno.png";
+import machineImg from "../../assets/machine.jpg";
 
 
-export default function Projects() {
+const CalculatorDiv = styled.div`
+    color: deeppink;
+    text-align: center;
+    background-color: #ffd9de;
+    width: 100%;
+    padding-top: /*70px*/4.61vw;
+`;
+
+
+export default function Projects({setTitle}: {setTitle: (title: string) => void}) {
+    setTitle("Projects | Resume");
+
     return (
         <StyledTable>
             <tr>
@@ -26,7 +38,7 @@ export default function Projects() {
             <tr>
                 <td>
                     <Flexbox>
-                        <ThumbnailImg src={gimmeCardsImg} alt="gimme cards project"/>
+                        <ThumbnailImg src={gimmeCardsImg} alt={"gimme cards project"}/>
                         <Textbox>
                             <StyledH2>Gimme Cards</StyledH2>
                             <StyledH3>Full-Stack Java Chatbot</StyledH3>
@@ -55,7 +67,7 @@ export default function Projects() {
             <tr>
                 <td>
                     <Flexbox>
-                        <ThumbnailImg src={blindboxImg} alt="blindbox buddy project"/>
+                        <ThumbnailImg src={blindboxImg} alt={"blindbox buddy project"}/>
                         <Textbox>
                             <StyledH2>Blindbox Buddy</StyledH2>
                             <StyledH3>Full-Stack Django Website</StyledH3>
@@ -84,7 +96,7 @@ export default function Projects() {
             <tr>
                 <td>
                     <Flexbox>
-                        <ThumbnailImg src={unoImg} alt="MCTS agents project"/>
+                        <ThumbnailImg src={unoImg} alt={"MCTS agents project"}/>
                         <Textbox>
                             <StyledH2>Uno MCTS Agents</StyledH2>
                             <StyledH3>Intro to AI Class Project</StyledH3>
@@ -107,7 +119,7 @@ export default function Projects() {
             <tr>
                 <td>
                     <Flexbox>
-                        <ThumbnailImg src={machineImg} alt="machine project"/>
+                        <ThumbnailImg src={machineImg} alt={"machine project"}/>
                         <Textbox>
                             <StyledH2>machinE</StyledH2>
                             <StyledH3>game design contest</StyledH3>
@@ -130,21 +142,21 @@ export default function Projects() {
             <tr>
                 <td>
                     <Flexbox>
-                        <div className="thumbnail-size calculator">
+                        <CalculatorDiv>
                             <StyledH2>Bubblegum Calculator</StyledH2>
 
-                            <input id="input1" type="text"/>
-                            <input id="input2" type="text"/><br/>
+                            <StyledInput id={"input1"} type={"text"}/>
+                            <StyledInput id={"input2"} type={"text"}/>
 
-                            <button onClick="addNumbers()">+</button>
-                            <button onClick="subtract()">-</button>
-                            <button onClick="multiply()">*</button>
-                            <button onClick="divide()">/</button>
-                            <button onClick="exponentiate()">**</button>
-                            <button onClick="clearAnswer()">Clear</button>
+                            {/*<button onClick="addNumbers()">+</button>*/}
+                            {/*<button onClick="subtract()">-</button>*/}
+                            {/*<button onClick="multiply()">*</button>*/}
+                            {/*<button onClick="divide()">/</button>*/}
+                            {/*<button onClick="exponentiate()">**</button>*/}
+                            {/*<button onClick="clearAnswer()">Clear</button>*/}
 
                             <StyledH3 id="answer"></StyledH3>
-                        </div>
+                        </CalculatorDiv>
                         <Textbox>
                             <StyledH3>CS303 MP1 Project</StyledH3>
                             <StyledP>
@@ -156,5 +168,5 @@ export default function Projects() {
                 </td>
             </tr>
         </StyledTable>
-    )
+    );
 }

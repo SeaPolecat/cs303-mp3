@@ -1,8 +1,8 @@
-import {Flexbox, PosterImg, StyledH2, StyledP, StyledTable, Textbox} from "../styles/GeneralStyles.tsx";
+import {Flexbox, PosterImg, StyledH2, StyledP, StyledTable, Textbox} from "../../styles/ReusableStyles.tsx";
 import styled from "styled-components";
-import meImg from "../assets/me.png";
-import sharkImg from "../assets/shark.jpeg";
-import eelsImg from "../assets/eels.jpeg";
+import meImg from "../../assets/me.png";
+import sharkImg from "../../assets/shark.jpeg";
+import eelsImg from "../../assets/eels.jpeg";
 
 
 const AquariumImg = styled.img`
@@ -11,13 +11,15 @@ const AquariumImg = styled.img`
 `;
 
 
-export default function Home() {
+export default function Home({setTitle}: {setTitle: (title: string) => void}) {
+    setTitle("Home | Resume");
+
     return (
         <StyledTable>
             <tr>
                 <td>
                     <Flexbox>
-                        <PosterImg src={meImg} alt="yi ji wang"/>
+                        <PosterImg src={meImg} alt={"yi ji wang"}/>
 
                         <Textbox>
                             <StyledH2>About Me</StyledH2>
@@ -33,8 +35,8 @@ export default function Home() {
                                 In my free time, I often draw and visit aquariums.
                             </StyledP>
 
-                            <AquariumImg src={sharkImg} alt="shark"/>
-                            <AquariumImg src={eelsImg} alt="eels"/>
+                            <AquariumImg src={sharkImg} alt={"shark"}/>
+                            <AquariumImg src={eelsImg} alt={"eels"}/>
                         </Textbox>
                     </Flexbox>
                 </td>

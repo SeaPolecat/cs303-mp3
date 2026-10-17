@@ -1,7 +1,12 @@
-import {Flexbox, StyledH1, StyledH2, StyledP, StyledTable, Textbox} from "../styles/GeneralStyles.tsx";
+import {Flexbox, StyledH1, StyledH2, StyledP, StyledTable, Textbox, ThumbnailImg} from "../../styles/ReusableStyles.tsx";
+import bgcMurderImg from "../../assets/bgc-murder.png";
+import bgcTriviaImg from "../../assets/bgc-trivia.png";
+import bgcDuosImg from "../../assets/bgc-duos.png";
 
 
-export default function Leadership() {
+export default function Leadership({setTitle}: {setTitle: (title: string) => void}) {
+    setTitle("Leadership | Resume");
+
     return (
         <StyledTable>
             <tr>
@@ -26,7 +31,7 @@ export default function Leadership() {
             <tr>
                 <td>
                     <Flexbox>
-                        <img className="thumbnail-size" src="static/images/bgc-murder.JPG" alt="murder mystery photo"/>
+                        <ThumbnailImg src={bgcMurderImg} alt={"murder mystery photo"}/>
                         <Textbox>
                             <StyledH2>Murder Mystery</StyledH2>
                             <StyledP>
@@ -42,7 +47,7 @@ export default function Leadership() {
             <tr>
                 <td>
                     <Flexbox>
-                        <img className="thumbnail-size" src="static/images/bgc-trivia.JPG" alt="trivia night photo"/>
+                        <ThumbnailImg src={bgcTriviaImg} alt={"trivia night photo"}/>
                         <Textbox>
                             <StyledH2>Trivia Night</StyledH2>
                             <StyledP>
@@ -57,7 +62,7 @@ export default function Leadership() {
             <tr>
                 <td>
                     <Flexbox>
-                        <img className="thumbnail-size" src="static/images/bcg-duos.JPG" alt="duos night photo"/>
+                        <ThumbnailImg src={bgcDuosImg} alt={"duos night photo"}/>
                         <Textbox>
                             <StyledH2>Duos Night</StyledH2>
                             <StyledP>
@@ -69,5 +74,5 @@ export default function Leadership() {
                 </td>
             </tr>
         </StyledTable>
-    )
+    );
 }

@@ -7,11 +7,13 @@ import {
     StyledP,
     StyledTable,
     Textbox
-} from "../styles/GeneralStyles.tsx";
-import cdsImg from "../assets/cds.jpg";
+} from "../../styles/ReusableStyles.tsx";
+import cdsImg from "../../assets/cds.jpg";
 
 
-export default function Education() {
+export default function Education({setTitle}: {setTitle: (title: string) => void}) {
+    setTitle("Education | Resume");
+
     return (
         <>
             <StyledTable>
@@ -23,7 +25,7 @@ export default function Education() {
             </StyledTable>
 
             <Flexbox>
-                <PosterImg src={cdsImg} alt="boston university center for computing and data sciences"/>
+                <PosterImg src={cdsImg} alt={"boston university center for computing and data sciences"}/>
 
                 <Textbox>
                     <StyledH2>Boston University <small>(9/2022 - 12/2026)</small></StyledH2>
@@ -40,5 +42,5 @@ export default function Education() {
                 </Textbox>
             </Flexbox>
         </>
-    )
+    );
 }

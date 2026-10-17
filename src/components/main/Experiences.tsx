@@ -7,12 +7,14 @@ import {
     StyledP,
     StyledTable,
     Textbox, ThumbnailImg
-} from "../styles/GeneralStyles.tsx";
-import idoriImg from "../assets/idori.webp";
-import pandaImg from "../assets/panda.jpg";
+} from "../../styles/ReusableStyles.tsx";
+import idoriImg from "../../assets/idori.webp";
+import pandaImg from "../../assets/panda.jpg";
 
 
-export default function Experiences() {
+export default function Experiences({setTitle}: {setTitle: (title: string) => void}) {
+    setTitle("Experiences | Resume");
+
     return (
         <StyledTable>
             <tr>
@@ -24,7 +26,7 @@ export default function Experiences() {
             <tr>
                 <td>
                     <Flexbox>
-                        <ThumbnailImg src={idoriImg} alt="idori products"/>
+                        <ThumbnailImg src={idoriImg} alt={"idori products"}/>
 
                         <Textbox>
                             <StyledH2>Idori LLC <small>&nbsp;(06/2023 - 12/2023)</small></StyledH2>
@@ -55,7 +57,7 @@ export default function Experiences() {
             <tr>
                 <td>
                     <Flexbox>
-                        <ThumbnailImg src={pandaImg} alt="panda express at george sherman union"/>
+                        <ThumbnailImg src={pandaImg} alt={"panda express at george sherman union"}/>
 
                         <Textbox>
                             <StyledH2>Panda Express <small>&nbsp;(01/2023 - 05/2023)</small></StyledH2>
@@ -70,5 +72,5 @@ export default function Experiences() {
                 </td>
             </tr>
         </StyledTable>
-    )
+    );
 }
