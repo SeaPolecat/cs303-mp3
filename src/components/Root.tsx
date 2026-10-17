@@ -6,21 +6,28 @@ import Education from "./Education.tsx";
 import Experiences from "./Experiences.tsx";
 import Projects from "./Projects.tsx";
 import Leadership from "./Leadership.tsx";
+import Header from "./Header.tsx";
+import Footer from "./Footer.tsx";
 
 
 export default function Root() {
     return (
         <>
+            <Header/>
             <Nav/>
 
-            <Routes>
-                <Route path="/*" element={<Home/>}/>
-                <Route path="/documents/*" element={<Documents/>}/>
-                <Route path="/education/*" element={<Education/>}/>
-                <Route path="/experiences/*" element={<Experiences/>}/>
-                <Route path="/projects/*" element={<Projects/>}/>
-                <Route path="/leadership/*" element={<Leadership/>}/>
-            </Routes>
+            <main>
+                <Routes>
+                    <Route path="/*" element={<Home/>}/>
+                    <Route path="/documents/*" element={<Documents/>}/>
+                    <Route path="/education/*" element={<Education/>}/>
+                    <Route path="/experiences/*" element={<Experiences/>}/>
+                    <Route path="/projects/*" element={<Projects/>}/>
+                    <Route path="/leadership/*" element={<Leadership/>}/>
+                </Routes>
+            </main>
+
+            <Footer/>
         </>
     );
 }
