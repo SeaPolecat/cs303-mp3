@@ -1,4 +1,5 @@
 import {Flexbox, PosterImg, StyledH2, StyledP, StyledTable, Textbox} from "../../styles/ReusableStyles.tsx";
+import {useEffect} from "react";
 import styled from "styled-components";
 import meImg from "../../assets/me.png";
 import sharkImg from "../../assets/shark.jpeg";
@@ -11,8 +12,11 @@ const AquariumImg = styled.img`
 `;
 
 
-export default function Home({setTitle}: {setTitle: (title: string) => void}) {
-    setTitle("Home | Resume");
+export default function Home() {
+
+    useEffect(() => {
+        document.title = "Home | Resume"
+    }, []);
 
     return (
         <StyledTable>

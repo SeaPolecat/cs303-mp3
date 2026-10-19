@@ -8,12 +8,16 @@ import {
     StyledTable,
     Textbox, ThumbnailImg
 } from "../../styles/ReusableStyles.tsx";
+import {useEffect} from "react";
 import idoriImg from "../../assets/idori.webp";
 import pandaImg from "../../assets/panda.jpg";
 
 
-export default function Experiences({setTitle}: {setTitle: (title: string) => void}) {
-    setTitle("Experiences | Resume");
+export default function Experiences() {
+
+    useEffect(() => {
+        document.title = "Experiences | Resume"
+    }, []);
 
     return (
         <StyledTable>

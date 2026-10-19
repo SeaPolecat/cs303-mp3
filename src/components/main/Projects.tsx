@@ -3,30 +3,19 @@ import {
     StyledA,
     StyledH1,
     StyledH2,
-    StyledH3, StyledInput,
+    StyledH3,
     StyledP,
     StyledTable,
     Textbox, ThumbnailImg
 } from "../../styles/ReusableStyles.tsx";
-import styled from "styled-components";
+import Calculator from "./Calculator.tsx";
 import gimmeCardsImg from "../../assets/gimmecards.png";
 import blindboxImg from "../../assets/blindbox.png";
 import unoImg from "../../assets/uno.png";
 import machineImg from "../../assets/machine.jpg";
 
 
-const CalculatorDiv = styled.div`
-    color: deeppink;
-    text-align: center;
-    background-color: #ffd9de;
-    width: 100%;
-    padding-top: /*70px*/4.61vw;
-`;
-
-
-export default function Projects({setTitle}: {setTitle: (title: string) => void}) {
-    setTitle("Projects | Resume");
-
+export default function Projects() {
     return (
         <StyledTable>
             <tr>
@@ -141,30 +130,7 @@ export default function Projects({setTitle}: {setTitle: (title: string) => void}
 
             <tr>
                 <td>
-                    <Flexbox>
-                        <CalculatorDiv>
-                            <StyledH2>Bubblegum Calculator</StyledH2>
-
-                            <StyledInput id={"input1"} type={"text"}/>
-                            <StyledInput id={"input2"} type={"text"}/>
-
-                            {/*<button onClick="addNumbers()">+</button>*/}
-                            {/*<button onClick="subtract()">-</button>*/}
-                            {/*<button onClick="multiply()">*</button>*/}
-                            {/*<button onClick="divide()">/</button>*/}
-                            {/*<button onClick="exponentiate()">**</button>*/}
-                            {/*<button onClick="clearAnswer()">Clear</button>*/}
-
-                            <StyledH3 id="answer"></StyledH3>
-                        </CalculatorDiv>
-                        <Textbox>
-                            <StyledH3>CS303 MP1 Project</StyledH3>
-                            <StyledP>
-                                A simple web calculator built with Javascript. <br/><br/>
-                                Try it out!
-                            </StyledP>
-                        </Textbox>
-                    </Flexbox>
+                    <Calculator/>
                 </td>
             </tr>
         </StyledTable>

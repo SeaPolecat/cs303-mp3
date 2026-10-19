@@ -9,7 +9,6 @@ import Leadership from "./main/Leadership.tsx";
 import Header from "./Header.tsx";
 import Footer from "./Footer.tsx";
 import styled from "styled-components";
-import {useEffect, useState} from "react";
 
 
 /* wraps around nav and main */
@@ -39,12 +38,6 @@ const StyledMain = styled.main`
 
 
 export default function Root() {
-    const [title, setTitle] = useState("");
-
-    useEffect(() => {
-        document.title = title;
-    }, [title])
-
     return (
         <>
             <Header/>
@@ -53,12 +46,12 @@ export default function Root() {
                 <Nav/>
                 <StyledMain>
                     <Routes>
-                        <Route path="/*" element={<Home setTitle={setTitle}/>}/>
-                        <Route path="/documents/*" element={<Documents setTitle={setTitle}/>}/>
-                        <Route path="/education/*" element={<Education setTitle={setTitle}/>}/>
-                        <Route path="/experiences/*" element={<Experiences setTitle={setTitle}/>}/>
-                        <Route path="/projects/*" element={<Projects setTitle={setTitle}/>}/>
-                        <Route path="/leadership/*" element={<Leadership setTitle={setTitle}/>}/>
+                        <Route path="/*" element={<Home/>}/>
+                        <Route path="/documents/*" element={<Documents/>}/>
+                        <Route path="/education/*" element={<Education/>}/>
+                        <Route path="/experiences/*" element={<Experiences/>}/>
+                        <Route path="/projects/*" element={<Projects/>}/>
+                        <Route path="/leadership/*" element={<Leadership/>}/>
                     </Routes>
                 </StyledMain>
             </Wrapper>

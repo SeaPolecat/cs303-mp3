@@ -91,7 +91,7 @@ export const StyledButton = styled.button`
     margin: /*20px*/1.32vw 0;
     border-radius: /*30px*/1.97vw;
     
-    :hover {
+    &:hover {
         background-color: white;
     }
 `;

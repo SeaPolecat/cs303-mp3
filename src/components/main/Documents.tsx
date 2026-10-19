@@ -1,5 +1,6 @@
 import {StyledH1, StyledH2, StyledTable} from "../../styles/ReusableStyles.tsx";
 import styled from "styled-components";
+import {useEffect} from "react";
 import resume from "../../assets/resume.pdf";
 import psm from "../../assets/resume.pdf";
 
@@ -15,8 +16,11 @@ const PsmIframe = styled.iframe`
 `;
 
 
-export default function Documents({setTitle}: {setTitle: (title: string) => void}) {
-    setTitle("Documents | Resume");
+export default function Documents() {
+
+    useEffect(() => {
+        document.title = "Documents | Resume"
+    }, []);
 
     return (
         <StyledTable>

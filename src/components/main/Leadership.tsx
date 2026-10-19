@@ -1,11 +1,15 @@
 import {Flexbox, StyledH1, StyledH2, StyledP, StyledTable, Textbox, ThumbnailImg} from "../../styles/ReusableStyles.tsx";
+import {useEffect} from "react";
 import bgcMurderImg from "../../assets/bgc-murder.png";
 import bgcTriviaImg from "../../assets/bgc-trivia.png";
 import bgcDuosImg from "../../assets/bgc-duos.png";
 
 
-export default function Leadership({setTitle}: {setTitle: (title: string) => void}) {
-    setTitle("Leadership | Resume");
+export default function Leadership() {
+
+    useEffect(() => {
+        document.title = "Leadership | Resume"
+    }, []);
 
     return (
         <StyledTable>

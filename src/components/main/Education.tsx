@@ -8,11 +8,15 @@ import {
     StyledTable,
     Textbox
 } from "../../styles/ReusableStyles.tsx";
+import {useEffect} from "react";
 import cdsImg from "../../assets/cds.jpg";
 
 
-export default function Education({setTitle}: {setTitle: (title: string) => void}) {
-    setTitle("Education | Resume");
+export default function Education() {
+
+    useEffect(() => {
+        document.title = "Education | Resume"
+    }, []);
 
     return (
         <>
