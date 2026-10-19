@@ -7,8 +7,8 @@ import {
     StyledP,
     Textbox
 } from "../../styles/ReusableStyles.tsx";
+import {useState} from "react";
 import styled from "styled-components";
-import {useEffect, useState} from "react";
 
 
 const CalculatorDiv = styled.div`
@@ -36,10 +36,6 @@ export default function Calculator() {
     const [input2, setInput2] = useState("");
     const [answer, setAnswer] = useState("");
     const [isRed, setIsRed] = useState(false);
-
-    useEffect(() => {
-        document.title = "Projects | Resume"
-    }, []);
 
     function showAnswer(ans: number) {
         if (ans < 0 || isNaN(ans))

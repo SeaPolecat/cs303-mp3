@@ -24,7 +24,6 @@ export default function Home() {
                 <td>
                     <Flexbox>
                         <PosterImg src={meImg} alt={"yi ji wang"}/>
-
                         <Textbox>
                             <StyledH2>About Me</StyledH2>
 

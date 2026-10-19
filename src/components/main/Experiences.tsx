@@ -42,15 +42,13 @@ export default function Experiences() {
                                 <StyledA
                                     href="https://github.com/SeaPolecat/benjy-the-treehopper-unitygame"
                                     target="_blank"
-                                >
-                                    Github repo
+                                >Github repo
                                 </StyledA> <br/>
 
                                 <StyledA
                                     href="https://play.unity.com/en/games/b1ee31bb-81ad-4bc6-b5bc-e37fb592a46e/treehopping-with-benjy"
                                     target="_blank"
-                                >
-                                    Playable demo
+                                >Playable demo
                                 </StyledA>
                             </StyledP>
                         </Textbox>

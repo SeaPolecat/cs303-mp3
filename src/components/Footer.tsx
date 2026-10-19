@@ -5,6 +5,11 @@ import {StyledA, StyledP} from "../styles/ReusableStyles.tsx";
 const StyledFooter = styled.footer`
     width: 80vw;
     margin: /*30px*/1.98vw auto;
+
+    @media screen and (max-width: 750px) {
+        text-align: center;
+        width: 90vw;
+    }
 `;
 
 

@@ -30,7 +30,6 @@ export default function Education() {
 
             <Flexbox>
                 <PosterImg src={cdsImg} alt={"boston university center for computing and data sciences"}/>
-
                 <Textbox>
                     <StyledH2>Boston University <small>(9/2022 - 12/2026)</small></StyledH2>
                     <StyledH3>

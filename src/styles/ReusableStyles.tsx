@@ -61,6 +61,7 @@ export const PosterImg = styled.img`
 
     @media screen and (max-width: 750px) {
         width: 60%;
+        margin-bottom: /*20px*/1.32vw;
     }
 `;
 
@@ -73,6 +74,7 @@ export const ThumbnailImg = styled.img`
 
     @media screen and (max-width: 750px) {
         width: 100%;
+        margin-bottom: /*20px*/1.32vw;
     }
 `;
 

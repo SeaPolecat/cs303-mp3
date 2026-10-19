@@ -38,14 +38,12 @@ export default function Projects() {
                                 <StyledA
                                     href="https://github.com/SeaPolecat/gimmecards-discord-bot"
                                     target="_blank"
-                                >
-                                    Github repo
+                                >Github repo
                                 </StyledA> <br/>
                                 <StyledA
                                     href="https://www.gimmecards.ca/"
                                     target="_blank"
-                                >
-                                    Project website
+                                >Project website
                                 </StyledA>
                             </StyledP>
                         </Textbox>
@@ -67,14 +65,12 @@ export default function Projects() {
                                 <StyledA
                                     href="https://github.com/SeaPolecat/blindbox-buddy-fullstack"
                                     target="_blank"
-                                >
-                                    Github repo
+                                >Github repo
                                 </StyledA> <br/>
                                 <StyledA
                                     href="https://www.youtube.com/watch?v=7SdnyKaCl-A"
                                     target="_blank"
-                                >
-                                    Demo video
+                                >Demo video
                                 </StyledA>
                             </StyledP>
                         </Textbox>
@@ -96,8 +92,7 @@ export default function Projects() {
                                 <StyledA
                                     href="https://github.com/SeaPolecat/uno-mcts-agents"
                                     target="_blank"
-                                >
-                                    Github repo
+                                >Github repo
                                 </StyledA>
                             </StyledP>
                         </Textbox>
@@ -119,8 +114,7 @@ export default function Projects() {
                                 <StyledA
                                     href="https://www.youtube.com/watch?v=EsuuaDHkULU"
                                     target="_blank"
-                                >
-                                    Demo video
+                                >Demo video
                                 </StyledA>
                             </StyledP>
                         </Textbox>
